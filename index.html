@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151f2b">
+  <meta name="description" content="Guarde aniversários, encontre ideias de presente e escreva um cartão do seu jeito.">
+  <title>Dia de Mimo — Aniversários e presentes</title>
+  <link rel="icon" type="image/svg+xml" href="assets/marca.svg">
+  <link rel="stylesheet" href="site.css">
+  <script src="site.js" defer></script>
+</head>
+<body id="inicio">
+  <svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-gift" viewBox="0 0 24 24"><path d="M4 11h16v10H4zM3 7h18v4H3zM12 7v14m0-14H8.5A2.5 2.5 0 1 1 11 4.5L12 7Zm0 0h3.5A2.5 2.5 0 1 0 13 4.5L12 7Z"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 11h18m-12 5 2 2 4-4"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2c0 6-4 10-10 10 6 0 10 4 10 10 0-6 4-10 10-10-6 0-10-4-10-10Z"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="m14 6 4 4M5 19l4-.8L20 7a2.8 2.8 0 0 0-4-4L5 14l-.8 5Z"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M6 7l1 13h10l1-13M9 7V4h6v3m-5 4v5m4-5v5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 1 1 8 0v3m-4 5v2"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20.5 11.5a8.5 8.5 0 0 1-12 7.8L4 20.5l1.2-4.3a8.5 8.5 0 1 1 15.3-4.7Z"/><path d="M9 8.5a6 6 0 0 0 6.5 6.5M9 8.5l1.1 1.3m4.1 4.1 1.3 1.1"/></symbol>
+  </svg>
+  <a class="skip-link" href="#principal">Ir para o conteúdo</a>
+  <header class="header">
+    <div class="shell header-inner">
+      <a class="brand" href="#inicio" aria-label="Dia de Mimo, início">
+        <img src="assets/marca.svg" alt="" width="38" height="38">
+        <span>Dia de Mimo<span class="brand-dot">.</span></span>
+      </a>
+      <nav class="navigation" aria-label="Principal">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#presentes">Ideias de presente</a>
+        <a href="#agenda">Minha agenda</a>
+      </nav>
+      <button class="button button-small button-primary header-cta" type="button" data-add>
+        <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg>
+        <span class="header-cta-label">Adicionar aniversário</span>
+      </button>
+      <a class="button button-small button-secondary mobile-agenda" href="#agenda">
+        <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg> Minha agenda
+      </a>
+    </div>
+  </header>
+
+  <main id="principal">
+    <section class="hero" aria-labelledby="hero-title">
+      <picture class="hero-photo">
+        <img src="assets/presente.webp" alt="" width="1440" height="960" fetchpriority="high">
+      </picture>
+      <div class="hero-shade"></div>
+      <div class="shell hero-inner">
+        <div class="hero-content">
+          <p class="eyebrow eyebrow-light"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg> Para os dias que importam</p>
+          <h1 id="hero-title">Lembre da data.<br><em>Acerte no presente.</em></h1>
+          <p class="hero-description">Guarde os aniversários de quem você ama, encontre um mimo que combine com a pessoa e escreva um cartão do seu jeito.</p>
+          <div class="hero-actions">
+            <button class="button button-primary" type="button" data-add>
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg>
+              Adicionar aniversário
+            </button>
+            <a class="button button-ghost" href="#presentes">
+              Ver ideias de presente
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-note" aria-hidden="true">
+          <span class="hero-note-icon"><svg class="icon"><use href="#i-calendar"/></svg></span>
+          <span><strong>Um lembrete na véspera</strong><small>No calendário do seu celular</small></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps section" id="como-funciona" aria-labelledby="steps-title">
+      <div class="shell steps-layout">
+        <div class="steps-intro">
+          <p class="eyebrow">Como funciona</p>
+          <h2 id="steps-title">Da data ao <em>carinho.</em></h2>
+        </div>
+        <div class="step">
+          <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></span>
+          <div><h3>Anote o aniversário</h3><p>Salve o dia e o mês e adicione um lembrete anual ao calendário.</p></div>
+        </div>
+        <div class="step">
+          <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#i-gift"/></svg></span>
+          <div><h3>Escolha um mimo</h3><p>Explore ideias por categoria e veja o que cabe no seu orçamento.</p></div>
+        </div>
+        <div class="step">
+          <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#i-card"/></svg></span>
+          <div><h3>Escreva um cartão</h3><p>Personalize a mensagem e compartilhe pelo WhatsApp.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog section" id="presentes" aria-labelledby="catalog-title">
+      <div class="shell">
+        <div class="section-heading catalog-heading">
+          <div>
+            <p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg> Curadoria de mimos</p>
+            <h2 id="catalog-title">O que vai fazer <em>essa pessoa sorrir?</em></h2>
+          </div>
+          <p>Um mimo para cada jeito de comemorar. Escolha uma ideia e dê seu toque com uma mensagem pessoal.</p>
+        </div>
+        <div class="recipient-bar" id="recipient-bar" hidden>
+          <p>Escolhendo um presente para <strong id="recipient-name"></strong></p>
+          <button class="text-button" id="clear-recipient" type="button">Limpar seleção</button>
+        </div>
+        <div class="catalog-tools">
+          <div class="filters" aria-label="Categorias">
+            <button class="filter" data-category="todos" aria-pressed="true" type="button">Todas as ideias</button>
+            <button class="filter" data-category="flores" aria-pressed="false" type="button">Flores</button>
+            <button class="filter" data-category="chocolates" aria-pressed="false" type="button">Chocolates</button>
+            <button class="filter" data-category="kits" aria-pressed="false" type="button">Kits</button>
+            <button class="filter" data-category="cestas" aria-pressed="false" type="button">Cestas</button>
+          </div>
+          <label class="budget-label" for="budget">Orçamento
+            <select id="budget">
+              <option value="">Qualquer valor</option>
+              <option value="70">Até R$ 70</option>
+              <option value="100">Até R$ 100</option>
+              <option value="150">Até R$ 150</option>
+            </select>
+          </label>
+        </div>
+        <p id="filter-status" class="visually-hidden" aria-live="polite"></p>
+
+        <div class="gift-grid">
+          <article class="gift-card" data-type="flores" data-min="90">
+            <div class="gift-photo flowers"><img src="assets/flores.webp" alt="Buquê com flores rosa e laranja" width="640" height="426" loading="lazy"><span class="category-badge">Flores</span></div>
+            <div class="gift-body">
+              <h3>Buquê da estação</h3>
+              <p>Flores frescas para dar cor ao dia.</p>
+              <p class="gift-price">R$ 90 a R$ 150</p>
+              <button class="gift-action" data-gift="Buquê da estação" type="button" aria-label="Escolher ideia: Buquê da estação">Escolher ideia<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            </div>
+          </article>
+          <article class="gift-card" data-type="chocolates" data-min="45">
+            <div class="gift-photo chocolate"><img src="assets/chocolates.webp" alt="Caixa aberta com trufas sortidas" width="640" height="426" loading="lazy"><span class="category-badge">Chocolates</span></div>
+            <div class="gift-body">
+              <h3>Caixa de trufas</h3>
+              <p>Sabores sortidos para adoçar a comemoração.</p>
+              <p class="gift-price">R$ 45 a R$ 85</p>
+              <button class="gift-action" data-gift="Caixa de trufas" type="button" aria-label="Escolher ideia: Caixa de trufas">Escolher ideia<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            </div>
+          </article>
+          <article class="gift-card" data-type="kits" data-min="95">
+            <div class="gift-photo care"><img src="assets/autocuidado.webp" alt="Kit com vela e toalha em tons claros" width="640" height="426" loading="lazy"><span class="category-badge">Kits</span></div>
+            <div class="gift-body">
+              <h3>Kit de autocuidado</h3>
+              <p>Um convite para desacelerar e se cuidar.</p>
+              <p class="gift-price">R$ 95 a R$ 180</p>
+              <button class="gift-action" data-gift="Kit de autocuidado" type="button" aria-label="Escolher ideia: Kit de autocuidado">Escolher ideia<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            </div>
+          </article>
+          <article class="gift-card" data-type="cestas" data-min="130">
+            <div class="gift-photo breakfast"><img src="assets/cesta.webp" alt="Cesta com croissant, frutas e suco" width="640" height="426" loading="lazy"><span class="category-badge">Cestas</span></div>
+            <div class="gift-body">
+              <h3>Cesta de café da manhã</h3>
+              <p>Uma surpresa gostosa logo cedo.</p>
+              <p class="gift-price">R$ 130 a R$ 220</p>
+              <button class="gift-action" data-gift="Cesta de café da manhã" type="button" aria-label="Escolher ideia: Cesta de café da manhã">Escolher ideia<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            </div>
+          </article>
+        </div>
+
+        <div class="no-results" id="no-results" hidden>
+          <p>Experimente outra categoria ou aumente o orçamento.</p>
+          <button class="button button-secondary button-small" id="reset-filters" type="button">Ver todas as ideias</button>
+        </div>
+        <p class="catalog-note">Imagens e faixas de preço ilustrativas. Use as ideias para encomendar em uma loja de sua preferência.</p>
+      </div>
+    </section>
+
+    <section class="agenda section" id="agenda" aria-labelledby="agenda-title">
+      <div class="shell agenda-layout">
+        <div class="agenda-intro">
+          <p class="eyebrow eyebrow-light"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg> Minha agenda</p>
+          <h2 id="agenda-title">As datas de<br> quem <em>importa.</em></h2>
+          <p>Cadastre os aniversários e veja quais estão chegando. Para receber o aviso na véspera, importe o lembrete no seu calendário.</p>
+          <div class="agenda-privacy"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg> As datas ficam salvas neste navegador.</div>
+        </div>
+
+        <div class="agenda-panel">
+          <div class="agenda-panel-heading">
+            <h3>Próximos aniversários</h3>
+            <button class="button button-primary button-small" type="button" data-add>
+              <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Adicionar
+            </button>
+          </div>
+          <div class="agenda-empty" id="agenda-empty">
+            <span class="empty-icon"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></span>
+            <p><strong>Qual é a primeira data que você quer guardar?</strong></p>
+            <p>Adicione um nome, um dia e um mês para começar.</p>
+          </div>
+          <ul class="birthday-list" id="birthday-list" hidden></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section" aria-labelledby="faq-title">
+      <div class="shell faq-layout">
+        <div>
+          <p class="eyebrow">Dúvidas comuns</p>
+          <h2 id="faq-title">Bom saber.</h2>
+        </div>
+        <div class="faq-items">
+          <details>
+            <summary>Como recebo o lembrete?<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></summary>
+            <p>Na agenda, use <strong>Lembrete</strong> ao lado do aniversário. Abra o arquivo no calendário do celular ou do computador e importe o evento anual. Confira no calendário se o aviso para a véspera foi ativado.</p>
+          </details>
+          <details>
+            <summary>Como encomendo um presente?<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></summary>
+            <p>Escolha uma ideia, use a faixa de valor como referência e encomende com a loja de sua preferência. Você pode preparar o cartão por aqui e compartilhar a mensagem pelo WhatsApp.</p>
+          </details>
+          <details>
+            <summary>Onde ficam as datas que eu cadastro?<svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></summary>
+            <p>Os nomes e as datas ficam no navegador em que você fez o cadastro. Você pode editá-los ou excluí-los na sua agenda. Se limpar os dados do navegador, os aniversários salvos ali também serão apagados.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <a class="brand" href="#inicio" aria-label="Dia de Mimo, início">
+        <img src="assets/marca.svg" alt="" width="34" height="34"><span>Dia de Mimo<span class="brand-dot">.</span></span>
+      </a>
+      <a class="footer-top" href="#inicio">Voltar ao início <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <dialog id="birthday-dialog" class="dialog" aria-labelledby="birthday-title">
+    <div class="dialog-content">
+      <button class="icon-button dialog-close" data-close type="button" aria-label="Fechar">
+        <svg class="icon" aria-hidden="true"><use href="#i-x"/></svg>
+      </button>
+      <p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg> Minha agenda</p>
+      <h2 id="birthday-title">Adicionar aniversário</h2>
+      <form id="birthday-form">
+        <label class="field" for="birthday-name">Nome ou apelido
+          <input id="birthday-name" name="name" type="text" maxlength="80" placeholder="Ex. Ana" autocomplete="off" required autofocus>
+        </label>
+        <div class="date-fields">
+          <label class="field" for="birthday-day">Dia
+            <input id="birthday-day" name="day" type="number" inputmode="numeric" min="1" max="31" placeholder="Ex. 12" required>
+          </label>
+          <label class="field" for="birthday-month">Mês
+            <select id="birthday-month" name="month" required>
+              <option value="">Selecione o mês</option>
+              <option value="1">Janeiro</option><option value="2">Fevereiro</option><option value="3">Março</option><option value="4">Abril</option><option value="5">Maio</option><option value="6">Junho</option><option value="7">Julho</option><option value="8">Agosto</option><option value="9">Setembro</option><option value="10">Outubro</option><option value="11">Novembro</option><option value="12">Dezembro</option>
+            </select>
+          </label>
+        </div>
+        <p class="field-help">A agenda usa só o dia e o mês para calcular a próxima data.</p>
+        <button class="button button-primary button-full" type="submit">Salvar aniversário<svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></button>
+      </form>
+    </div>
+  </dialog>
+
+  <dialog id="card-dialog" class="dialog card-dialog" aria-labelledby="card-title">
+    <div class="dialog-content">
+      <button class="icon-button dialog-close" data-close type="button" aria-label="Fechar">
+        <svg class="icon" aria-hidden="true"><use href="#i-x"/></svg>
+      </button>
+      <p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-card"/></svg> Cartão de aniversário</p>
+      <h2 id="card-title">Deixe seu carinho por escrito.</h2>
+      <p class="selected-gift">Sua ideia de presente <strong id="selected-gift"></strong></p>
+      <div class="card-layout">
+        <form id="card-form">
+          <div class="card-fields">
+            <label class="field" for="card-to">Para
+              <input type="text" name="to" id="card-to" maxlength="80" placeholder="Nome da pessoa" autocomplete="off" autofocus>
+            </label>
+            <label class="field" for="card-from">De
+              <input type="text" name="from" id="card-from" maxlength="80" placeholder="Seu nome" autocomplete="off">
+            </label>
+          </div>
+          <label class="field" for="card-message">Sua mensagem
+            <textarea name="message" id="card-message" rows="5" maxlength="600" required></textarea>
+          </label>
+          <button class="text-button" type="button" id="message-idea">Usar outra mensagem pronta</button>
+        </form>
+        <div class="card-preview" aria-label="Prévia do cartão">
+          <svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>
+          <p class="preview-title" id="preview-title">Feliz aniversário!</p>
+          <p id="preview-message"></p>
+          <p class="preview-from" id="preview-from"></p>
+        </div>
+      </div>
+      <div class="card-actions">
+        <button class="button button-secondary" type="button" id="copy-message">Copiar mensagem</button>
+        <a class="button button-primary" id="share-card" target="_blank" rel="noopener noreferrer">
+          <svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg> Abrir no WhatsApp
+        </a>
+      </div>
+      <p id="share-help" class="field-help card-help" aria-live="polite">No WhatsApp, escolha o contato e envie a mensagem.</p>
+    </div>
+  </dialog>
+
+  <template id="birthday-row">
+    <li class="birthday-row">
+      <span class="date-badge"><strong class="date-day"></strong><span class="date-month"></span></span>
+      <div class="birthday-detail">
+        <strong class="birthday-person"></strong>
+        <span class="birthday-distance"></span>
+      </div>
+      <div class="birthday-actions">
+        <button class="mini-button" type="button" data-action="present"><svg class="icon" aria-hidden="true"><use href="#i-gift"/></svg><span>Ver presentes</span></button>
+        <button class="mini-button" type="button" data-action="calendar"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg><span>Lembrete</span></button>
+        <button class="icon-button" type="button" data-action="edit"><svg class="icon" aria-hidden="true"><use href="#i-edit"/></svg></button>
+        <button class="icon-button delete-button" type="button" data-action="delete"><svg class="icon" aria-hidden="true"><use href="#i-trash"/></svg></button>
+      </div>
+    </li>
+  </template>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
